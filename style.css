@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white : hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+    --Very-light-gray : hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+}
+body{
+    background-color: var(--Very-light-gray);
+    font-size: 15px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+h1{
+    color: var(--Very-light-gray);
+    margin: 20px 0px;
+    font-family: "Big Shoulders Display", sans-serif;
+    text-transform: uppercase;
+}
+p{
+    color: var(--Transparent-white);
+    font-family: "Lexend Deca", sans-serif;
+}
+button{
+    background-color: var(--Very-light-gray);
+    padding: 10px 20px;
+    border: 1px solid var(--Very-light-gray);
+    border-radius: 30px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+button.btn1{
+    color: var(--Bright-orange);
+}
+button.btn1:hover{
+    background-color: var(--Bright-orange);
+    color: var(--Very-light-gray);
+}
+button.btn2{
+    color: var(--Dark-cyan);
+}
+button.btn2:hover{
+    background-color: var(--Dark-cyan);
+    color: var(--Very-light-gray);
+}
+button.btn3{
+    color: var(--Very-dark-cyan);
+}
+button.btn3:hover{
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-light-gray);
+}
+.container{
+    margin: 20% 10%;
+    display: flex;
+    flex-direction: column;
+}
+.container div{
+    padding: 40px 60px 40px 40px;
+}
+.container .card1{
+    background-color: var(--Bright-orange);
+    border-radius: 5px 5px 0 0;
+}
+.container .card2{
+    background-color: var(--Dark-cyan);
+}
+.container .card3{
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 0 5px 5px;
+}
+@media(min-width:768px){
+    .container{
+        flex-direction: row;
+    }
+    .container .card1{
+        border-radius: 5px 0 0 5px;
+    }
+    .container .card3{
+        border-radius: 0 5px 5px 0;
+    }
+}
